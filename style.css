@@ -1,0 +1,146 @@
+/* Add your CSS here */
+
+/* Hero Section Styling */
+.hero {
+  background-color: #0071c5; /* Intel blue */
+  color: white; /* White text for contrast */
+  text-align: center; /* Center align content */
+  padding: 20px; /* Add spacing around the content */
+  font-family: 'Arial', 'Helvetica Neue', sans-serif; /* Intel-like font stack */
+}
+
+/* Intel Logo Styling */
+.intel-logo {
+  width: 150px; /* Set a reasonable size for the logo */
+  margin-bottom: 5px; /* Reduce space below the logo */
+}
+
+/* Main Heading Styling */
+.hero h1 {
+  font-size: 2.5em; /* Large font size for the main heading */
+  font-weight: bold; /* Bold text for emphasis */
+  margin-top: 5px; /* Reduce space above the heading */
+  margin-bottom: 10px; /* Add space below the heading */
+}
+
+/* Subheading Styling */
+.subheading {
+  color: #ffffff; /* White text for contrast */
+  font-size: 1.2em; /* Slightly larger font size */
+  font-weight: 300; /* Light font weight for a clean look */
+  margin-top: 10px; /* Add space above the subheading */
+  padding-left: 15px; /* Add extra padding to the left */
+  padding-right: 15px; /* Add extra padding to the right */
+}
+
+/* Timeline Section Styling */
+.timeline {
+  display: flex; /* Arrange cards in a row */
+  flex-wrap: nowrap; /* Prevent wrapping on large screens */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 20px; /* Add space between cards */
+  padding: 20px; /* Add padding around the timeline */
+  background-color: #f9f9f9; /* Light background for contrast */
+
+  /* Scroll Snap Settings */
+  scroll-snap-type: x mandatory; /* Enable horizontal scroll snapping */
+}
+
+/* Timeline Instructions Styling */
+.timeline-instructions {
+  font-family: 'Arial', 'Helvetica Neue', sans-serif; /* Intel-like font stack */
+  font-size: 1em; /* Standard font size */
+  color: #333; /* Dark gray text for readability */
+  text-align: center; /* Center align the text */
+  margin-top: 20px; /* Add space above the instructions */
+  margin-bottom: 20px; /* Add space below the instructions */
+}
+
+/* Card Styling */
+.card {
+  flex: 0 0 300px; /* Set a fixed width for each card */
+  border: 1px solid #ddd; /* Add a light border */
+  border-radius: 5px; /* Round the corners */
+  padding: 15px; /* Add padding inside the card */
+  background-color: white; /* White background for cards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  font-family: 'Arial', 'Helvetica Neue', sans-serif; /* Intel-like font stack */
+  color: #333; /* Dark gray text for readability */
+  text-align: center; /* Center align text inside the card */
+  position: relative; /* Position for hover effect */
+  overflow: hidden; /* Hide content that overflows the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+
+  /* Scroll Snap Alignment */
+  scroll-snap-align: start; /* Snap the card to the start of the viewport */
+}
+
+/* Hover Effect for Card */
+.card:hover {
+  transform: translateY(-5px); /* Slightly lift the card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a stronger shadow */
+}
+
+/* Hidden Details Section */
+.card .details {
+  position: absolute; /* Position relative to the card */
+  bottom: 0; /* Start at the bottom of the card */
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 113, 197, 0.9); /* Semi-transparent Intel blue */
+  color: white; /* White text for contrast */
+  padding: 10px;
+  transform: translateY(100%); /* Hide below the card initially */
+  transition: transform 0.3s ease; /* Smooth slide-in effect */
+  font-size: 0.9em; /* Slightly smaller font size for details */
+  line-height: 1.4; /* Add spacing for readability */
+}
+
+/* Reveal Details on Hover */
+.card:hover .details {
+  transform: translateY(0); /* Slide up to reveal details */
+}
+
+/* Card Heading Styling */
+.card h2 {
+  font-size: 1.5em; /* Larger font size for the year */
+  color: #0071c5; /* Intel blue for the year */
+  font-family: 'Arial', 'Helvetica Neue', sans-serif; /* Intel-like font stack */
+  margin-bottom: 10px; /* Add space below the year */
+}
+
+.card h3 {
+  font-size: 1.2em; /* Slightly smaller font size for the title */
+  color: #363636; /* Slightly lighter Intel blue for the title */
+  font-family: 'Arial', 'Helvetica Neue', sans-serif; /* Intel-like font stack */
+  margin-bottom: 10px; /* Add space below the title */
+}
+
+/* Card Image Styling */
+.card img {
+  width: 100%; /* Make the image take the full width of the card */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 5px; /* Match the card's rounded corners */
+  margin-bottom: 10px; /* Add space below the image */
+}
+
+/* Card Text Styling */
+.card p {
+  font-size: 1em; /* Standard font size for the description */
+  line-height: 1.5; /* Add spacing between lines for readability */
+  color: #555; /* Medium gray for the description text */
+  font-family: 'Arial', 'Helvetica Neue', sans-serif; /* Intel-like font stack */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+  .timeline {
+    flex-wrap: wrap; /* Allow cards to stack vertically */
+    overflow-x: visible; /* Disable horizontal scrolling */
+    scroll-snap-type: none; /* Disable scroll snap on small screens */
+  }
+
+  .card {
+    flex: 1 1 100%; /* Make cards take full width */
+  }
+}
