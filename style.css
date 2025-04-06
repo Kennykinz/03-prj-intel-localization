@@ -42,8 +42,7 @@ body {
 }
 
 @media (max-width: 708px) {
-  .hero p {
-  }
+  /* Removed empty ruleset for .hero p */
 }
 
 /* Timeline Section Styling */
