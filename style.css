@@ -10,10 +10,6 @@
   font-style: normal;
 }
 
-:root {
-  --section-padding: 60px 20px; /* Define a standard padding value */
-}
-
 body {
   color: #333;
   margin: 0;
@@ -53,7 +49,7 @@ body {
 /* Timeline Section Styling */
 #timeline-carousel {
   background-color: #f3f3f3;
-  padding: var(--section-padding); /* Use standardized padding */
+  padding: 10px; /* Use standardized padding */
 }
 
 .timeline {
@@ -82,7 +78,7 @@ body {
 }
 .card img {
   width: 100%;
-  height: auto;
+  box-shadow: 0 6px 15px rgba(126, 125, 125, 0.2);
   border-radius: 10px 10px 0 0; /* Match card corners */
 }
 .card h1, section > div > div h1 {
@@ -136,6 +132,7 @@ section > div > div a {
 
 section > div > div a:hover {
   background-color: #f5f5f5;
+  color: #333; /* Ensure sufficient contrast */
 }
 
 section form {
@@ -167,7 +164,7 @@ section form label {
 section form input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #f5f5f5;
+  border: 1px solid #ccc; /* Use a darker border color for better visibility */
   border-radius: 5px;
   font-size: 1em;
 }
@@ -205,6 +202,31 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+/* RTL Support */
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="rtl"] .hero, [dir="rtl"] header.hero {
+  text-align: right;
+}
+
+.card {
+  width: 100%;
+}
+
+[dir="rtl"] section > div > div {
+  text-align: right;
+}
+
+[dir="rtl"] section form label {
+  text-align: right;
+}
+
+[dir="rtl"] footer {
+  text-align: right;
+}
+
 /* Responsive Design */
 /* Adjust layout for screens smaller than 768px */
 @media (max-width: 768px) {
@@ -231,9 +253,11 @@ footer a:hover {
     font-size: 1em;
   }
 
-  /* Set card width to 100% for better responsiveness on smaller screens */
+  /* Set card width to 90% for better responsiveness on smaller screens */
   .card {
-    width: 100%;
+    width: 90%;
+    max-width: 300px; /* Maintain consistency with default width */
+    margin: 0 auto; /* Center the card */
   }
 }
 
@@ -295,4 +319,49 @@ header.hero .language-toggle select {
   border: 1px solid #ddd;
 }
 
-/* Removed JavaScript code from CSS file */
+/* Style for the Newsletter Section */
+#newsletter-section {
+  background-color: #0071c5; /* Intel blue background */
+  padding: 40px 20px; /* Add spacing around the section */
+  text-align: center; /* Center-align the content */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#newsletter-section h2 {
+  font-size: 1.8em;
+  color: white; /* White font for the heading */
+  margin-bottom: 20px;
+}
+
+#newsletter-section .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Space between input and button */
+}
+
+#newsletter-section input[type="email"] {
+  width: 100%;
+  max-width: 400px; /* Limit the width of the input */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+#newsletter-section button {
+  padding: 10px 20px;
+  background-color: white; /* White button background */
+  color: #0071c5; /* Intel blue text for the button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#newsletter-section button:hover {
+  background-color: #005a9c; /* Darker blue on hover */
+  color: white; /* White text on hover */
+}

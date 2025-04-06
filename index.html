@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en">
 <head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Intel: Sustainability Through the Ages</title>
+  <link id="bootstrap-css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script>
+    document.getElementById('bootstrap-css').onerror = function() {
+      const fallbackLink = document.createElement('link');
+      fallbackLink.rel = 'stylesheet';
+      fallbackLink.href = 'local-path/bootstrap.min.css';
+      document.head.appendChild(fallbackLink);
+    };
+  </script>
   <link rel="stylesheet" href="style.css" />
   <meta name="description" content="Explore Intel's journey through sustainability and innovation, from the 8086 processor to achieving 99% renewable electricity usage." />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <style>
-    .intel-logo {
-      width: 150px; /* Set a reasonable size for the logo */
-      margin-bottom: 5px; /* Reduce space below the logo */
-      display: block; /* Ensure the image is displayed as a block element */
-      margin-left: auto; /* Center the logo horizontally */
-      margin-right: auto;
+    button:focus, a:focus {
+      outline: 2px solid #0071c5; /* Intel blue */
+      outline-offset: 2px;
     }
   </style>
-</head>
 <body>
 
   <!-- Header / Hero Section -->
@@ -41,123 +41,128 @@
     <div class="carousel-inner">
       <!-- Slide 1 -->
       <div class="carousel-item active">
-        <div class="row">
-          <div class="col-sm-3">
-            <div class="card text-center">
+      <div class="row g-2"> <!-- Added g-2 class to reduce spacing -->
+        <div class="col-sm-3">
+        <div class="card text-center">
+          <h2>1968</h2>
+          <img src="img/1.jpg" alt="Intel Founded" class="card-img-top">
+          <div class="card-body">
+          <h3>Intel Founded</h3>
+          <p>
+            Robert Noyce and Gordon Moore rename the newly formed company 
+            NM Electronics to Intel Corporation, laying the foundation for 
+            decades of technological innovation.
+          </p>
+          </div>
+        </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card text-center">
+          <h2>1971</h2>
+          <img src="img/2.jpg" alt="First Microprocessor" class="card-img-top">
+          <div class="card-body">
+          <h3>First Microprocessor</h3>
+          <p>
+            Intel debuts the 4004, the world's first commercial microprocessor, 
+            igniting the microprocessor revolution and propelling the future 
+            of computing devices.
+          </p>
+          </div>
+        </div>
+        </div>
 
-              <h2>1968</h2>
-              <img src="img/1.jpg" alt="Intel Founded" class="card-img-top">
-              <div class="card-body">
-                <h3>Intel Founded</h3>
-                <p>
-                  Robert Noyce and Gordon Moore rename the newly formed company 
-                  NM Electronics to Intel Corporation, laying the foundation for 
-                  decades of technological innovation.
-                </p>
-              </div>
-            </div>
+     <!-- Slide 2 -->
+        <div class="col-sm-3">
+        <div class="card text-center">
+          <h2>1978</h2>
+          <img src="img/3.jpg" alt="First 16-bit Microprocessor" class="card-img-top">
+          <div class="card-body">
+          <h3>8086 Processor</h3>
+          <p>
+            Launch of the 8086 processor, establishing the x86 architecture 
+            that drives countless PCs and servers in the modern era.
+          </p>
           </div>
-          <div class="col-sm-3">
-            <div class="card text-center">
-              <h2>1971</h2>
-              <img src="img/2.jpg" alt="First Microprocessor" class="card-img-top">
-              <div class="card-body">
-                <h3>First Microprocessor</h3>
-                <p>
-                  Intel debuts the 4004, the world's first commercial microprocessor, 
-                  igniting the microprocessor revolution and propelling the future 
-                  of computing devices.
-                </p>
-              </div>
-            </div>
+        </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card text-center">
+          <h2>1985</h2>
+          <img src="img/4.jpg" alt="386 Processor" class="card-img-top">
+          <div class="card-body">
+          <h3>386 Processor</h3>
+          <p>
+            Intel introduces the 386 processor with 32-bit architecture, 
+            ushering in a new era of performance and multitasking for 
+            personal computers.
+          </p>
           </div>
-          <div class="col-sm-3">
-            <div class="card text-center">
-              <h2>1978</h2>
-              <img src="img/3.jpg" alt="First 16-bit Microprocessor" class="card-img-top">
-              <div class="card-body">
-                <h3>8086 Processor</h3>
-                <p>
-                  Launch of the 8086 processor, establishing the x86 architecture 
-                  that drives countless PCs and servers in the modern era.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="card text-center">
-              <h2>1985</h2>
-              <img src="img/4.jpg" alt="386 Processor" class="card-img-top">
-              <div class="card-body">
-                <h3>386 Processor</h3>
-                <p>
-                  Intel introduces the 386 processor with 32-bit architecture, 
-                  ushering in a new era of performance and multitasking for 
-                  personal computers.
-                </p>
-              </div>
-            </div>
-          </div>
+        </div>
         </div>
       </div>
-
-      <!-- Slide 2 -->
+      </div>
+              <!-- Slide 3 -->
       <div class="carousel-item">
-        <div class="row">
-          <div class="col-sm-3">
-            <div class="card text-center">
-              <h2>2006</h2>
-              
-              <div class="card-body">
-                <h3>Peak GHG Emissions</h3>
-                <p>
-                  This year marks Intel's highest annual greenhouse gas emissions 
-                  for operations. Over subsequent years, Intel invests heavily in 
-                  chemical abatement, renewable energy, and energy-efficient 
-                  manufacturing to reverse this trend.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="card text-center">
-              <h2>2020</h2>
-              <div class="card-body">
-                <h3>RISE Strategy</h3>
-                <p>
-                  Intel launches its RISE (Responsible, Inclusive, Sustainable, 
-                  Enabling) strategy and 2030 goals, aiming to drive industry-wide 
-                  progress on climate action, water stewardship, and waste reduction.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="card text-center">
-              <h2>Commitment</h2>
-              <div class="card-body">
-                <h3>Net-Zero by 2040</h3>
-                <p>
-                  In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
-                  (Scope 1 and 2) by 2040. This builds on decades of environmental 
-                  initiatives and partnerships.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="card text-center">
-              <h2>Water &amp; Waste</h2>
-              <div class="card-body">
-                <h3>Conservation Efforts</h3>
-                <p>
-                    Intel conserves billions of gallons of water annually, collaborates 
-                    with local communities to restore watersheds, and advances a circular economy.
-                </p>
-              </div>
-            </div>
+      <div class="row g-2"> <!-- Added g-2 class to reduce spacing -->
+        <div class="col-sm-3">
+        <div class="card text-center">
+          <h2>2006</h2>
+          <img src="img/1.jpg" alt="Intel Founded" class="card-img-top">
+          <div class="card-body">
+          <h3>Peak GHG Emissions</h3>
+          <p>
+            This year marks Intel's highest annual greenhouse gas emissions 
+            for operations. Over subsequent years, Intel invests heavily in 
+            chemical abatement, renewable energy, and energy-efficient 
+            manufacturing to reverse this trend.
+          </p>
           </div>
         </div>
+        </div>
+
+
+        <div class="col-sm-3">
+        <div class="card text-center">
+          <h2>2020</h2>
+          <img src="img/placeholder.jpg" alt="RISE Strategy" class="card-img-top">
+          <div class="card-body">
+          <h3>RISE Strategy</h3>
+          <p>
+            Intel launches its RISE (Responsible, Inclusive, Sustainable, 
+            Enabling) strategy and 2030 goals, aiming to drive industry-wide 
+            progress on climate action, water stewardship, and waste reduction.
+          </p>
+          </div>
+        </div>
+        </div>
+
+                <!-- Slide 3 -->
+        <div class="col-sm-3">
+        <div class="card text-center">
+          <h2>2022</h2>
+          <div class="card-body">
+          <h3>Net-Zero by 2040</h3>
+          <p>
+            In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
+            (Scope 1 and 2) by 2040. This builds on decades of environmental 
+            initiatives and partnerships.
+          </p>
+          </div>
+        </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card text-center">
+          <h2>Water &amp; Waste</h2>
+          <div class="card-body">
+          <h3>Conservation Efforts</h3>
+          <p>
+            Intel conserves billions of gallons of water annually, collaborates 
+            with local communities to restore watersheds, and advances a circular economy.
+          </p>
+          </div>
+        </div>
+        </div>
+      </div>
       </div>
     </div>
 
@@ -217,16 +222,48 @@
   </section>
 
   <!-- Subscription Form -->
-  <section>
+  <section id="newsletter-section">
     <h2>Subscribe to our Newsletter</h2>
     <form action="/subscribe" method="POST">
-      <form>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Email address</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
     </nav>
-  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Removed redundant script tag -->
+  <script>
+    const savedLanguage = localStorage.getItem("language") || "en";
+    const languageSelect = document.getElementById("language-select");
+    if (languageSelect) {
+      languageSelect.value = savedLanguage;
+    }
+      // Update the content dynamically based on the selected language.
+      // For example, you can fetch translations from a server or a local JSON file
+      // and update the text content of elements on the page accordingly.
+      // Example:
+      // const translations = {
+      //   en: { header: "Welcome", footer: "Contact Us" },
+      //   es: { header: "Bienvenido", footer: "Contáctenos" }
+      // };
+      // document.querySelector("header h1").textContent = translations[language].header;
+      // document.querySelector("footer a").textContent = translations[language].footer;
+    function changeLanguage(language) {
+      localStorage.setItem("language", language);
+      // Update content as shown above
+    }
+  </script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
